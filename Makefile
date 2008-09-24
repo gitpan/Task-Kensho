@@ -6,7 +6,7 @@
 #
 #       ANY CHANGES MADE HERE WILL BE LOST!
 #
-#   MakeMaker ARGV: (q[--defaultdeps])
+#   MakeMaker ARGV: ()
 #
 #   MakeMaker Parameters:
 
@@ -18,7 +18,7 @@
 #     NO_META => q[1]
 #     PL_FILES => {  }
 #     PREREQ_PM => { ExtUtils::MakeMaker=>q[6.42] }
-#     VERSION => q[0.0.1]
+#     VERSION => q[0.0.2]
 #     dist => { PREOP=>q[$(PERL) -I. "-MModule::Install::Admin" -e "dist_preop(q($(DISTVNAME)))"] }
 #     test => { TESTS=>q[t/00.load.t t/perlcritic.t t/pod-coverage.t t/pod.t] }
 
@@ -60,11 +60,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = Task::Kensho
 NAME_SYM = Task_Kensho
-VERSION = 0.0.1
+VERSION = 0.0.2
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_0_1
+VERSION_SYM = 0_0_2
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.0.1
+XS_VERSION = 0.0.2
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -185,15 +185,9 @@ PERL_ARCHIVE       =
 PERL_ARCHIVE_AFTER = 
 
 
-TO_INST_PM = lib/Task/Kensho.pm \
-	lib/Task/pod2htmd.tmp \
-	lib/Task/pod2htmi.tmp
+TO_INST_PM = lib/Task/Kensho.pm
 
-PM_TO_BLIB = lib/Task/pod2htmi.tmp \
-	blib/lib/Task/pod2htmi.tmp \
-	lib/Task/pod2htmd.tmp \
-	blib/lib/Task/pod2htmd.tmp \
-	lib/Task/Kensho.pm \
+PM_TO_BLIB = lib/Task/Kensho.pm \
 	blib/lib/Task/Kensho.pm
 
 
@@ -261,7 +255,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = Task-Kensho
-DISTVNAME = Task-Kensho-0.0.1
+DISTVNAME = Task-Kensho-0.0.2
 
 
 # --- MakeMaker macro section:
@@ -554,7 +548,7 @@ distdir : create_distdir
 
 # --- MakeMaker dist_test section:
 disttest : distdir
-	cd $(DISTVNAME) && $(ABSPERLRUN) Makefile.PL "--defaultdeps"
+	cd $(DISTVNAME) && $(ABSPERLRUN) Makefile.PL 
 	cd $(DISTVNAME) && $(MAKE) $(PASTHRU)
 	cd $(DISTVNAME) && $(MAKE) test $(PASTHRU)
 
@@ -714,7 +708,7 @@ $(FIRST_MAKEFILE) : Makefile.PL $(CONFIGDEP)
 	-$(NOECHO) $(RM_F) $(MAKEFILE_OLD)
 	-$(NOECHO) $(MV)   $(FIRST_MAKEFILE) $(MAKEFILE_OLD)
 	- $(MAKE) $(USEMAKEFILE) $(MAKEFILE_OLD) clean $(DEV_NULL)
-	$(PERLRUN) Makefile.PL "--defaultdeps"
+	$(PERLRUN) Makefile.PL 
 	$(NOECHO) $(ECHO) "==> Your Makefile has been rebuilt. <=="
 	$(NOECHO) $(ECHO) "==> Please rerun the $(MAKE) command.  <=="
 	false
@@ -735,8 +729,7 @@ $(MAKE_APERL_FILE) : $(FIRST_MAKEFILE) pm_to_blib
 	$(NOECHO) $(PERLRUNINST) \
 		Makefile.PL DIR= \
 		MAKEFILE=$(MAKE_APERL_FILE) LINKTYPE=static \
-		MAKEAPERL=1 NORECURS=1 CCCDLFLAGS= \
-		--defaultdeps
+		MAKEAPERL=1 NORECURS=1 CCCDLFLAGS=
 
 
 # --- MakeMaker test section:
@@ -770,7 +763,7 @@ testdb_static :: testdb_dynamic
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0,0,1,0">' > $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0,0,2,0">' > $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <TITLE>$(DISTNAME)</TITLE>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <ABSTRACT>A glipmse at an Englightened Perl.</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>Chris Prather &lt;chris@prahter.org&gt;</AUTHOR>' >> $(DISTNAME).ppd
@@ -787,8 +780,6 @@ ppd :
 
 pm_to_blib : $(TO_INST_PM)
 	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e 'pm_to_blib({@ARGV}, '\''$(INST_LIB)/auto'\'', '\''$(PM_FILTER)'\'')' -- \
-	  lib/Task/pod2htmi.tmp blib/lib/Task/pod2htmi.tmp \
-	  lib/Task/pod2htmd.tmp blib/lib/Task/pod2htmd.tmp \
 	  lib/Task/Kensho.pm blib/lib/Task/Kensho.pm 
 	$(NOECHO) $(TOUCH) pm_to_blib
 
@@ -828,5 +819,5 @@ checkdeps ::
 	$(PERL) Makefile.PL --checkdeps
 
 installdeps ::
-	$(PERL) Makefile.PL --config= --installdeps=Bundle::CPAN,0,local::lib,0
+	$(NOECHO) $(NOOP)
 

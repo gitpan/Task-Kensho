@@ -1,6 +1,6 @@
 package Task::Kensho;
 use strict;
-our $VERSION = '0.0.1';
+our $VERSION = '0.0.2';
 
 __END__
 =encoding utf-8
@@ -216,6 +216,10 @@ Standalone, extensible Perl module installer
 =item Devel::NYTProf
 
 Powerful feature-rich perl source code profiler 
+
+=item Perl::Tidy
+
+Parses and beautifies perl source
 
 =back
 
