@@ -1,6 +1,6 @@
 package Task::Kensho;
 use strict;
-our $VERSION = '0.0.6';
+our $VERSION = '0.0.7';
 
 __END__
 =encoding utf-8
@@ -109,6 +109,14 @@ An serialization framework for Moose classes
 =item  MooseX::Getopt
 
 A Moose role for processing command line options 
+
+=item MooseX::SimpleConfig
+
+A Moose role for setting attributes from a simple configfile
+
+=item MooseX::StrictConstructor
+
+Make your object constructors blow up on unknown attributes
 
 =item  namespace::clean
 
