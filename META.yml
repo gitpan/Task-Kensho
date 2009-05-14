@@ -3,7 +3,7 @@ abstract: 'A glipmse at an Englightened Perl.'
 author:
   - 'Chris Prather <chris@prahter.org>'
 distribution_type: module
-generated_by: 'Module::Install version 0.77'
+generated_by: 'Module::Install version 0.80'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -15,4 +15,4 @@ no_index:
     - t
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.0.8
+version: 0.09
