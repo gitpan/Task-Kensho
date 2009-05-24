@@ -2,8 +2,12 @@
 abstract: 'A glipmse at an Englightened Perl.'
 author:
   - 'Chris Prather <chris@prahter.org>'
+build_requires:
+  ExtUtils::MakeMaker: 6.42
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
 distribution_type: module
-generated_by: 'Module::Install version 0.80'
+generated_by: 'Module::Install version 0.87'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -15,4 +19,4 @@ no_index:
     - t
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.09
+version: 0.10

@@ -17,10 +17,10 @@
 #     NAME => q[Task::Kensho]
 #     NO_META => q[1]
 #     PL_FILES => {  }
-#     PREREQ_PM => { ExtUtils::MakeMaker=>q[6.50] }
-#     VERSION => q[0.09]
-#     clean => { FILES=>q[META.yml] }
+#     PREREQ_PM => { ExtUtils::MakeMaker=>q[6.42] }
+#     VERSION => q[0.10]
 #     dist => { PREOP=>q[$(PERL) -I. "-MModule::Install::Admin" -e "dist_preop(q($(DISTVNAME)))"] }
+#     realclean => { FILES=>q[MYMETA.yml] }
 #     test => { TESTS=>q[t/00.load.t] }
 
 # --- MakeMaker post_initialize section:
@@ -60,11 +60,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = Task::Kensho
 NAME_SYM = Task_Kensho
-VERSION = 0.09
+VERSION = 0.10
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_09
+VERSION_SYM = 0_10
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.09
+XS_VERSION = 0.10
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -255,7 +255,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = Task-Kensho
-DISTVNAME = Task-Kensho-0.09
+DISTVNAME = Task-Kensho-0.10
 
 
 # --- MakeMaker macro section:
@@ -453,7 +453,7 @@ clean :: clean_subdirs
 	  perl.exe so_locations \
 	  $(BASEEXT).exp 
 	- $(RM_RF) \
-	  META.yml blib 
+	  blib 
 	- $(MV) $(FIRST_MAKEFILE) $(MAKEFILE_OLD) $(DEV_NULL)
 
 
@@ -468,7 +468,7 @@ realclean purge ::  clean realclean_subdirs
 	- $(RM_F) \
 	  $(MAKEFILE_OLD) $(FIRST_MAKEFILE) 
 	- $(RM_RF) \
-	  $(DISTVNAME) 
+	  MYMETA.yml $(DISTVNAME) 
 
 
 # --- MakeMaker metafile section:
@@ -763,12 +763,12 @@ testdb_static :: testdb_dynamic
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0,09,0,0">' > $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0,10,0,0">' > $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <TITLE>$(DISTNAME)</TITLE>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <ABSTRACT>A glipmse at an Englightened Perl.</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>Chris Prather &lt;chris@prahter.org&gt;</AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <DEPENDENCY NAME="ExtUtils-MakeMaker" VERSION="6,50,0,0" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <DEPENDENCY NAME="ExtUtils-MakeMaker" VERSION="6,42,0,0" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <OS NAME="$(OSNAME)" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="darwin-2level-5.1" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <CODEBASE HREF="" />' >> $(DISTNAME).ppd
@@ -791,13 +791,14 @@ pm_to_blib : $(TO_INST_PM)
 
 
 # End.
-# Postamble by Module::Install 0.80
+# Postamble by Module::Install 0.87
 # --- Module::Install::Admin::Makefile section:
 
 realclean purge ::
 	$(RM_F) $(DISTVNAME).tar$(SUFFIX)
-	$(RM_RF) inc MANIFEST.bak _build
-	$(PERL) -I. "-MModule::Install::Admin" -e "remove_meta()"
+	$(RM_F) MANIFEST.bak _build
+	$(PERL) "-Ilib" "-MModule::Install::Admin" -e "remove_meta()"
+	$(RM_RF) inc
 
 reset :: purge
 
