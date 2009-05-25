@@ -18,7 +18,7 @@
 #     NO_META => q[1]
 #     PL_FILES => {  }
 #     PREREQ_PM => { ExtUtils::MakeMaker=>q[6.42] }
-#     VERSION => q[0.10]
+#     VERSION => q[0.11]
 #     dist => { PREOP=>q[$(PERL) -I. "-MModule::Install::Admin" -e "dist_preop(q($(DISTVNAME)))"] }
 #     realclean => { FILES=>q[MYMETA.yml] }
 #     test => { TESTS=>q[t/00.load.t] }
@@ -60,11 +60,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = Task::Kensho
 NAME_SYM = Task_Kensho
-VERSION = 0.10
+VERSION = 0.11
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_10
+VERSION_SYM = 0_11
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.10
+XS_VERSION = 0.11
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -255,7 +255,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = Task-Kensho
-DISTVNAME = Task-Kensho-0.10
+DISTVNAME = Task-Kensho-0.11
 
 
 # --- MakeMaker macro section:
@@ -763,7 +763,7 @@ testdb_static :: testdb_dynamic
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0,10,0,0">' > $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0,11,0,0">' > $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <TITLE>$(DISTNAME)</TITLE>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <ABSTRACT>A glipmse at an Englightened Perl.</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>Chris Prather &lt;chris@prahter.org&gt;</AUTHOR>' >> $(DISTNAME).ppd

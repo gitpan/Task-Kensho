@@ -1,6 +1,6 @@
 package Task::Kensho;
 use strict;
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 __END__
 =encoding utf-8
@@ -11,7 +11,7 @@ Task::Kensho - A Glimpse at an Enlightened Perl
 
 =head1 VERSION
 
-This document describes Task::Kensho version 0.10
+This document describes Task::Kensho version 0.11
 
 =head1 SYNOPSIS
 
@@ -121,7 +121,7 @@ A Moose role for setting attributes from a simple configfile
 
 Make your object constructors blow up on unknown attributes
 
-=item  namespace::clean
+=item  namespace::autoclean
 
 Keep imports and functions out of your namespace 
 
