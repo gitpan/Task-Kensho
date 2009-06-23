@@ -78,6 +78,7 @@ feature 'Module Development',
   'Perl::Tidy'      => 0,
   'Carp::Always'    => 0,
   'Modern::Perl'    => 0,
+  'Perl::Version'   => 0,
   ;
 
 ## There is no clear winner here
@@ -91,6 +92,7 @@ feature 'Date Modules',
   'DateTime'        => 0,
   'Date::Tiny'      => 0,
   'Time::ParseDate' => 0,
+  'Time::y2038'     => 0,
   ;
 
 feature 'Config Modules',
@@ -113,5 +115,7 @@ feature 'Script Hackery',
   'YYY'             => 0,
   ;
 
-auto_install();
+auto_set_repository;
+auto_manifest;
+auto_install;
 WriteAll;
