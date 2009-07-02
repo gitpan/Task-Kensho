@@ -19,5 +19,4 @@ no_index:
     - t
 resources:
   license: http://dev.perl.org/licenses/
-  repository: git://github.com/perigrin/task-kensho.git
-version: 0.12
+version: 0.13

@@ -1,13 +1,4 @@
 .cvsignore
-blib/arch/.exists
-blib/arch/auto/Task/Kensho/.exists
-blib/bin/.exists
-blib/lib/auto/Task/Kensho/.exists
-blib/lib/Task/.exists
-blib/lib/Task/Kensho.pm
-blib/man1/.exists
-blib/man3/.exists
-blib/script/.exists
 Changes
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm
@@ -19,16 +10,11 @@ inc/Module/Install/Fetch.pm
 inc/Module/Install/Include.pm
 inc/Module/Install/Makefile.pm
 inc/Module/Install/Metadata.pm
-inc/Module/Install/Repository.pm
 inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 lib/Task/Kensho.pm
-Makefile
 Makefile.PL
 MANIFEST			This list of files
-MANIFEST.SKIP
 META.yml
-nytprof.out
-pm_to_blib
 README
 t/00.load.t
