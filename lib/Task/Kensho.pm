@@ -1,6 +1,6 @@
 package Task::Kensho;
 use strict;
-our $VERSION = '0.17';
+our $VERSION = '0.18';
 
 __END__
 =encoding utf-8
@@ -246,9 +246,9 @@ Handy web browsing in a Perl object
 
 =over
 
-=item Module::Starter
+=item Dist::Zilla
 
-A simple starter kit for any module 
+Builds distributions of code to be uploaded to the CPAN. 
 
 =item Module::Install
 
@@ -299,10 +299,6 @@ A date object with as little code as possible
 =item Time::ParseDate
 
 Date parsing both relative and absolute
-
-=item Time::y2038
-
-Versions of Perl's time functions which work beyond 2038 
 
 =back
 
