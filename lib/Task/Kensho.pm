@@ -1,6 +1,6 @@
 package Task::Kensho;
 use strict;
-our $VERSION = '0.18';
+our $VERSION = '0.19';
 
 __END__
 =encoding utf-8
@@ -21,39 +21,41 @@ This document describes Task::Kensho version 0.11
 
 From L<http://en.wikipedia.org/wiki/Kensho>:
 
-    Kenshō (見性) (C. Wu) is a Japanese term for enlightenment experiences—most
-    commonly used within the confines of Zen Buddhism—literally meaning
-    "seeing one's nature"[1] or "true self."[2] It generally "refers to the
-    realization of nonduality of subject and object."[3] 
+    Kenshō (見性) (C. Wu) is a Japanese term for enlightenment
+    experiences—most commonly used within the confines of Zen
+    Buddhism—literally meaning "seeing one's nature"[1] or "true
+    self."[2] It generally "refers to the realization of nonduality of
+    subject and object."[3]
     
-Task::Kensho is a first cut at building a list of reccomended modules for
-Enlightened Perl development. CPAN is wonderful, but there are too many wheels
-and you have to pick and choose amongst the various competing technologies. 
+Task::Kensho is a first cut at building a list of reccomended modules
+for Enlightened Perl development. CPAN is wonderful, but there are too
+many wheels and you have to pick and choose amongst the various
+competing technologies.
 
-The plan is for Task::Kensho to be a rough testing ground for ideas that go
-into among other things the Enlightned Perl Organisation Extended Core
-(EPO-EC).
+The plan is for Task::Kensho to be a rough testing ground for ideas that
+go into among other things the Enlightned Perl Organisation Extended
+Core (EPO-EC).
 
-The modules that are bundled by Task::Kensho are broken down into several
-categories and are still being considered. They are all taken from various top
-100 most used perl modules lists and from discussions with various subject
-matter experts in the Perl Community. That said this bundle does I<not> follow
-the guidelines established for the EPO-EC for peer review via industry
-advisers.
+The modules that are bundled by Task::Kensho are broken down into
+several categories and are still being considered. They are all taken
+from various top 100 most used perl modules lists and from discussions
+with various subject matter experts in the Perl Community. That said
+this bundle does I<not> follow the guidelines established for the EPO-EC
+for peer review via industry advisers.
 
 =head2 Basic Toolchain
 
 =over
 
-=item  Bundle::CPAN
+=item L<Bundle::CPAN|Bundle::CPAN>
 
 Bundle to optimize the behaviour of CPAN.pm
 
-=item  local::lib
+=item L<local::lib|local::lib>
 
 Create and use a local lib/ for perl modules with PERL5LIB 
 
-=item version
+=item L<version|version>
 
 Perl extension for Version Objects 
 
@@ -63,29 +65,33 @@ Perl extension for Version Objects
 
 =over 
 
-=item Test::Simple
+=item L<Test::Simple|Test::Simple>
 
 Basic utilities for writing tests.
 
-=item Test::Most
+=item L<Test::Most|Test::Most>
 
 Most commonly needed test functions and features.
 
-=item Test::Exception
+=item L<Test::Exception|Test::Exception>
 
 Test exception based code 
 
-=item Test::Pod
+=item L<Test::Pod|Test::Pod>
 
 Check for POD errors in files
 
-=item Test::Pod::Coverage
+=item L<Test::Pod::Coverage|Test::Pod::Coverage>
 
 Check for pod coverage in your distribution.
 
-=item Test::Memory::Cycle
+=item L<Test::Memory::Cycle|Test::Memory::Cycle>
 
 Check for memory leaks and circular memory references
+
+=item L<Devel::Cover|Devel::Cover>
+
+Code coverage metrics for Perl
 
 =back
 
@@ -93,39 +99,39 @@ Check for memory leaks and circular memory references
 
 =over 
 
-=item  Moose
+=item L<Moose>
 
 A postmodern object system for Perl 5 
 
-=item MooseX::Types
+=item L<MooseX::Types|MooseX::Types>
 
 Organise your Moose types in libraries
 
-=item  Moose::Autobox
+=item L<Moose::Autobox|Moose::Autobox>
 
 Autoboxed wrappers for Native Perl datatypes 
 
-=item  MooseX::AttributeHelpers
+=item L<MooseX::Aliases|MooseX::Aliases>
 
-Extend your attribute interfaces 
+Easy aliasing of methods and attributes in Moose
 
-=item  MooseX::Storage
+=item L<MooseX::Storage|MooseX::Storage>
 
 An serialization framework for Moose classes 
 
-=item  MooseX::Getopt
+=item L<MooseX::Getopt|MooseX::Getopt>
 
 A Moose role for processing command line options 
 
-=item MooseX::SimpleConfig
+=item L<MooseX::SimpleConfig|MooseX::SimpleConfig>
 
 A Moose role for setting attributes from a simple configfile
 
-=item MooseX::StrictConstructor
+=item L<MooseX::StrictConstructor|MooseX::StrictConstructor>
 
 Make your object constructors blow up on unknown attributes
 
-=item  namespace::autoclean
+=item L<namespace::autoclean|namespace::autoclean>
 
 Keep imports and functions out of your namespace 
 
@@ -135,9 +141,9 @@ Keep imports and functions out of your namespace
 
 =over 
 
-=item  POE
+=item L<POE>
 
-portable multitasking and networking framework for Perl 
+Multitasking and networking framework for Perl 
 
 =back
 
@@ -145,19 +151,20 @@ portable multitasking and networking framework for Perl
 
 =over 
 
-=item XML::LibXML
+=item L<XML::LibXML|XML::LibXML>
 
 Perl Binding for libxml2
 
-=item XML::SAX
+=item L<XML::SAX|XML::SAX>
 
 Simple/Streaming API for XML
 
-=item XML::Generator::PerlData
+=item L<XML::Generator::PerlData|XML::Generator::PerlData>
 
-Perl extension for generating SAX2 events from nested Perl data structures.
+Perl extension for generating SAX2 events from nested Perl data
+structures.
 
-=item XML::SAX::Writer
+=item L<XML::SAX::Writer|XML::SAX::Writer>
 
 Output XML from SAX2 Events
 
@@ -167,118 +174,164 @@ Output XML from SAX2 Events
 
 =over
 
-=item Catalyst 
+=item L<Catalyst>
 
 The Elegant MVC Web Application Framework 
 
-=item Catalyst::View::TT
+=item L<Catalyst::View::TT|Catalyst::View::TT>
 
 Template View Class 
 
-=item Catalyst::Model::DBIC::Schema
+=item L<Catalyst::Model::DBIC::Schema|Catalyst::Model::DBIC::Schema>
 
 DBIx::Class::Schema Model Class
 
-=item Catalyst::Devel
+=item L<Catalyst::Devel|Catalyst::Devel>
 
 Catalyst Development Tools 
 
-=item Catalyst::Plugin::Session
+=item L<Catalyst::Plugin::Session|Catalyst::Plugin::Session>
 
-Generic Session plugin - ties together server side storage and client side
-state required to maintain session data.
+Generic Session plugin - ties together server side storage and client
+side state required to maintain session data.
 
-=item Catalyst::Plugin::Authentication
+=item L<Catalyst::Plugin::Authentication|Catalyst::Plugin::Authentication>
 
 Infrastructure plugin for the Catalyst authentication framework
 
-=item Catalyst::Plugin::StackTrace
+=item L<Catalyst::Plugin::StackTrace|Catalyst::Plugin::StackTrace>
 
 Display a stack trace on the debug screen 
 
+=item L<Catalyst::Plugin::FillInForm|Catalyst::Plugin::FillInForm>
+
+Fill forms automatically, based on data from a previous HTML form. 
+
+=item L<Catalyst::Controller::FormBuilder|Catalyst::Controller::FormBuilder>
+
+Create and validate forms in Catalyst
+
+=item L<Catalyst::Plugin::Session::State::Cookie|Catalyst::Plugin::Session::State::Cookie>
+
+Maintain session IDs using cookies.
+
+=item L<Catalyst::Plugin::Session::Store::DBIC|Catalyst::Plugin::Session::Store::DBIC>
+
+Store your sessions via DBIx::Class 
+
+=item L<Catalyst::Plugin::Static::Simple|Catalyst::Plugin::Static::Simple>
+
+Make serving static pages painless.
+
+=item L<Catalyst::View::JSON|Catalyst::View::JSON>
+
+Serve JSON through Catalyst
+
 =back 
-
-=head2 Database Development
-
-=over 
-
-=item DBI
-
-Database independent interface for Perl 
-
-=item DBD::SQLite
-
-Self Contained RDBMS in a DBI Driver 
-
-=item DBIx::Class
-
-Extensible and flexible object <-> relational mapper. 
-
-=item DBIx::Class::Schema::Loader
-
-Dynamic definition of a DBIx::Class::Schema 
-
-=item SQL::Translator
-
-Manipulate structured data definitions (SQL and more) 
-
-=back
 
 =head2 Web Crawling
 
 =over
 
-=item Bundle::LWP
+=item L<Bundle::LWP|Bundle::LWP>
 
 Install all libwww-perl related modules
 
-=item LWP::Simple
+=item L<LWP::Simple|LWP::Simple>
 
 Simple procedural interface to LWP 
 
-=item WWW::Mechanize
+=item L<WWW::Mechanize|WWW::Mechanize>
 
 Handy web browsing in a Perl object 
 
-=back 
+=back
+
+=head2 Database Development
+
+=over 
+
+=item L<DBI>
+
+Database independent interface for Perl 
+
+=item L<DBD::SQLite|DBD::SQLite>
+
+Self Contained RDBMS in a DBI Driver 
+
+=item L<DBIx::Class|DBIx::Class>
+
+Extensible and flexible object <-> relational mapper. 
+
+=item L<DBIx::Class::Schema::Loader|DBIx::Class::Schema::Loader>
+
+Dynamic definition of a DBIx::Class::Schema 
+
+=item L<SQL::Translator|SQL::Translator>
+
+Manipulate structured data definitions (SQL and more) 
+
+=back
+
+=head2 Excel / CSV
+
+=over 
+
+=item L<Text::CSV_XS|Text::CSV_XS>
+
+Manipulate comma-separated values (CSV) 
+
+=item L<Spreadsheet::ParseExcel::Simple|Spreadsheet::ParseExcel::Simple>
+
+A simple interface to Excel data
+
+=item L<Spreadsheet::WriteExcel::Simple|Spreadsheet::WriteExcel::Simple>
+
+Create Excel documents easily
+
+=back
 
 =head2 Module Development
 
 =over
 
-=item Dist::Zilla
+=item L<Dist::Zilla|Dist::Zilla>
 
 Builds distributions of code to be uploaded to the CPAN. 
 
-=item Module::Install
+=item L<Module::Install|Module::Install>
 
 Standalone, extensible Perl module installer 
 
-=item Devel::NYTProf
+=item L<Devel::NYTProf|Devel::NYTProf>
 
 Powerful feature-rich perl source code profiler 
 
-=item Perl::Tidy
+=item L<Perl::Tidy|Perl::Tidy>
 
 Parses and beautifies perl source
 
-=item Carp::Always
+=item L<Perl::Critic|Perl::Critic>
+
+Critique Perl source code for best-practices.
+
+=item L<Carp::Always|Carp::Always>
 
 Warns and dies noisily with stack backtraces
 
-=item Modern::Perl
+=item L<Modern::Perl|Modern::Perl>
 
 enable all of the features of Modern Perl with one command 
 
-=item Perl::Version 
+=item L<Perl::Version|Perl::Version>
 
 Parse and manipulate Perl version strings
 
-=item Software::License
+=item L<Software::License|Software::License>
 
 Packages that provide templated software licenses
 
-=item Pod::Readme
+=item L<Pod::Readme|Pod::Readme>
 
 Convert POD to README file
 
@@ -288,15 +341,23 @@ Convert POD to README file
 
 =over
 
-=item DateTime
+=item L<DateTime>
 
 A date and time object 
 
-=item Date::Tiny
+=item L<Date::Tiny|Date::Tiny>
 
 A date object with as little code as possible 
 
-=item Time::ParseDate
+=item L<Time::Tiny|Time::Tiny>
+
+A time object with as little code as possible 
+
+=item L<DateTime::Tiny|DateTime::Tiny>
+
+A date object with as little code as possible 
+
+=item L<Time::ParseDate|Time::ParseDate>
 
 Date parsing both relative and absolute
 
@@ -306,11 +367,11 @@ Date parsing both relative and absolute
 
 =over
 
-=item Config::Any
+=item L<Config::Any|Config::Any>
 
 Load configuration from different file formats, transparently 
 
-=item Config::General
+=item L<Config::General|Config::General>
 
 Generic Config Module 
 
@@ -320,19 +381,19 @@ Generic Config Module
 
 =over
 
-=item App::Ack
+=item L<App::Ack|App::Ack>
 
 A grep-like text finder
 
-=item App::Nopaste
+=item L<App::Nopaste|App::Nopaste>
 
 Easy access to any pastebin
 
-=item Devel::REPL
+=item L<Devel::REPL|Devel::REPL>
 
 A modern perl interactive shell 
 
-=item Module::Corelist
+=item L<Module::Corelist|Module::Corelist>
 
 What modules shipped with versions of perl 
 
@@ -341,29 +402,41 @@ What modules shipped with versions of perl
 =head2 Script Hackery
 
 These packages are included less for production work and more for
-whippitupitude. They reflect packages that people have found incredibly useful
-for prototyping and debugging before reducing down to a production script.
+whippitupitude. They reflect packages that people have found incredibly
+useful for prototyping and debugging before reducing down to a
+production script.
 
 =over
 
-=item Smart::Comments
+=item L<Smart::Comments|Smart::Comments>
 
 Comments that do more than just sit there 
 
-=item IO::All
+=item L<Term::ProgressBar::Simple|Term::ProgressBar::Simple>
 
-IO::All combines all of the best Perl IO modules into a single nifty object
-oriented interface to greatly simplify your everyday Perl IO idioms.
+Simple progress bars 
+
+=item L<IO::All|IO::All>
+
+IO::All combines all of the best Perl IO modules into a single nifty
+object oriented interface to greatly simplify your everyday Perl IO
+idioms.
 
 =back
 
+=head1 RELEASE SCHEDULE
+
+Starting with release 0.18 Task::Kensho was moved to a monthly release
+cycle. This will facilitate a consistent schedule for upstream vendors
+to track the changes in Task::Kensho.
+
 =head1 BUGS AND LIMITATIONS
 
-This list is by no means comprehensive of the "Good" Modules on CPAN. Nor is 
-this neccessarily the correct path for all developers. Each of these modules
-has a perfectly acceptable replacement that may work better for you. This 
-is however a path to good perl practicies, and a starting 
-place on the road to Enlightened Perl programming.
+This list is by no means comprehensive of the "Good" Modules on CPAN.
+Nor is this neccessarily the correct path for all developers. Each of
+these modules has a perfectly acceptable replacement that may work
+better for you. This is however a path to good perl practicies, and a
+starting place on the road to Enlightened Perl programming.
 
 Please report any bugs or feature requests to
 C<bug-task-kensho@rt.cpan.org>, or through the web interface at
@@ -371,7 +444,8 @@ L<http://rt.cpan.org>.
 
 =head1 SEE ALSO
 
-L<http://www.enlightenedperl.org/>, L<Perl::Dist::Strawberry>, L<http://gitorious.org/projects/task-kensho>
+L<http://www.enlightenedperl.org/>, 
+L<Perl::Dist::Strawberry|Perl::Dist::Strawberry>
 
 =head1 AUTHOR
 
