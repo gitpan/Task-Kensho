@@ -1,6 +1,6 @@
 package Task::Kensho;
 use strict;
-our $VERSION = '0.20';
+our $VERSION = '0.21';
 
 __END__
 
@@ -28,13 +28,13 @@ From L<http://en.wikipedia.org/wiki/Kensho>:
     self."[2] It generally "refers to the realization of nonduality of
     subject and object."[3]
     
-Task::Kensho is a first cut at building a list of reccomended modules
+Task::Kensho is a first cut at building a list of recommended modules
 for Enlightened Perl development. CPAN is wonderful, but there are too
 many wheels and you have to pick and choose amongst the various
 competing technologies.
 
 The plan is for Task::Kensho to be a rough testing ground for ideas that
-go into among other things the Enlightned Perl Organisation Extended
+go into among other things the Enlightened Perl Organisation Extended
 Core (EPO-EC).
 
 The modules that are bundled by Task::Kensho are broken down into
@@ -103,7 +103,7 @@ Code coverage metrics for Perl
 =item L<Task::Moose|Task::Moose>
 
 Moose is a postmodern object system for Perl5. Task::Moose installs
-Moose and optionally a list of reccomended modules that extend Moose.
+Moose and optionally a list of recommended modules that extend Moose.
 
 =back
 
@@ -124,6 +124,10 @@ Multitasking and networking framework for Perl
 =item L<XML::LibXML|XML::LibXML>
 
 Perl Binding for libxml2
+
+=item L<XML::LibXSLT|XML::LibXSLT>
+
+Interface to the gnome libxslt library
 
 =item L<XML::SAX|XML::SAX>
 
@@ -149,10 +153,14 @@ Output XML from SAX2 Events
 L<Catalyst|Catalyst> is The Elegant MVC Web Application Framework.
 Task::Catalyst is all you need to start with Catalyst.
 
+=item L<Template::Toolkit|Template::Toolkit>
+
+Template Processing System 
+
 =item L<XML::RSS|XML::RSS>
 
 Creates and updates RSS files  
-  	 
+
 =item L<XML::Atom|XML::Atom>
 
 Atom feed and API implementation
@@ -176,6 +184,11 @@ Simple procedural interface to LWP
 =item L<WWW::Mechanize|WWW::Mechanize>
 
 Handy web browsing in a Perl object 
+
+=item L<WWW::Mechanize::TreeBuilder|WWW::Mechanize::TreeBuilder>
+
+This module combines L<WWW::Mechanize|WWW::Mechanize> and
+L<HTML::TreeBuilder|HTML::TreeBuilder>.
 
 =back
 
@@ -266,6 +279,24 @@ Packages that provide templated software licenses
 =item L<Pod::Readme|Pod::Readme>
 
 Convert POD to README file
+
+=item L<CPAN::Uploader|CPAN::Uploader>
+
+Upload things to the CPAN
+
+=back
+
+=head2 Email
+
+=over
+
+=item L<Email::Valid|Email::Valid>
+
+Check validity of Internet email addresses 
+
+=item L<Email::Sender|Email::Sender>
+
+A library for sending email 
 
 =back
 
@@ -385,7 +416,8 @@ Chris Prather  C<< <chris@prather.org> >>
 
 =head1 LICENCE AND COPYRIGHT
 
-Copyright (c) 2008, 2009, Chris Prather  C<< <chris@prather.org> >>. Some rights reserved.
+Copyright (c) 2008, 2009, Chris Prather C<< <chris@prather.org> >>. Some
+rights reserved.
 
 This module is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself. See L<perlartistic>.
