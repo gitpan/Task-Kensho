@@ -1,6 +1,6 @@
 package Task::Kensho;
 use strict;
-our $VERSION = '0.22';
+our $VERSION = '0.23';
 
 __END__
 
@@ -12,7 +12,7 @@ Task::Kensho - A Glimpse at an Enlightened Perl
 
 =head1 VERSION
 
-This document describes Task::Kensho version 0.22
+This document describes Task::Kensho version 0.23
 
 =head1 SYNOPSIS
 
@@ -169,6 +169,8 @@ Atom feed and API implementation
 
 Definition of MIME types
 
+=back
+
 =head2 Web Crawling
 
 =over
@@ -323,6 +325,16 @@ A date object with as little code as possible
 =item L<Time::ParseDate|Time::ParseDate>
 
 Date parsing both relative and absolute
+
+=back
+
+=head2 Scalability
+
+=over
+
+=item L<CHI>
+
+A unified cache interface, like DBI
 
 =back
 
