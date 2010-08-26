@@ -19,6 +19,7 @@ no_index:
     - t
 requires:
   App::Ack: 0
+  App::Nopaste: 0
   App::cpanminus: 0
   App::perlbrew: 0
   Bundle::LWP: 0
@@ -77,13 +78,13 @@ requires:
   XML::Atom: 0
   XML::Generator::PerlData: 0
   XML::LibXML: 0
-  XML::LibXSLT: 0
   XML::RSS: 0
   XML::SAX: 0
   XML::SAX::Writer: 0
+  autodie: 0
   local::lib: 0
   version: 0
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://github.com/perigrin/task-kensho.git
-version: 0.23
+version: 0.24
