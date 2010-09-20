@@ -1,6 +1,6 @@
 package Task::Kensho;
 use strict;
-our $VERSION = '0.24';
+our $VERSION = '0.25';
 
 __END__
 
@@ -318,6 +318,10 @@ Upload things to the CPAN
 
 =over
 
+=item L<Email::Simple|Email::Simple>
+
+A B<simple> email object. No, really!
+
 =item L<Email::Valid|Email::Valid>
 
 Check validity of Internet email addresses
@@ -325,6 +329,10 @@ Check validity of Internet email addresses
 =item L<Email::Sender|Email::Sender>
 
 A library for sending email
+
+=item L<Email::MIME::Kit|Email::MIME::Kit>
+
+The Swiss army chainsaw of assembling email messages
 
 =back
 

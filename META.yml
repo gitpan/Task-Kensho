@@ -40,7 +40,9 @@ requires:
   Devel::NYTProf: 0
   Devel::REPL: 0
   Dist::Zilla: 0
+  Email::MIME::Kit: 0
   Email::Sender: 0
+  Email::Simple: 0
   Email::Valid: 0
   HTTP::Lite: 0
   IO::All: 0
@@ -87,4 +89,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://github.com/perigrin/task-kensho.git
-version: 0.24
+version: 0.25
