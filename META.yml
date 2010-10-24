@@ -89,4 +89,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://github.com/perigrin/task-kensho.git
-version: 0.25
+version: 0.26
