@@ -1,6 +1,6 @@
 package Task::Kensho;
 use strict;
-our $VERSION = '0.29';
+our $VERSION = '0.30';
 
 __END__
 
@@ -12,7 +12,7 @@ Task::Kensho - A Glimpse at an Enlightened Perl
 
 =head1 VERSION
 
-This document describes Task::Kensho version 0.29
+This document describes Task::Kensho version 0.30
 
 =head1 SYNOPSIS
 
@@ -99,6 +99,24 @@ Check for memory leaks and circular memory references
 =item L<Devel::Cover|Devel::Cover>
 
 Code coverage metrics for Perl
+
+=back
+
+=head2 Logging: Task::Kensho::Logging
+
+=over
+
+=item L<Log::Dispatch|Log::Dispatch>
+
+Dispatches messages to one or more outputs
+
+=item L<Log::Log4perl|Log::Log4perl>
+
+Log4j implementation for Perl
+
+=item L<Log::Contextual|Log::Contextual>
+
+Simple logging interface with a contextual log
 
 =back
 
@@ -207,9 +225,9 @@ Definition of MIME types
 
 Lightweight HTTP client implementation
 
-=item L<Bundle::LWP|Bundle::LWP>
+=item L<LWP::UserAgent|LWP::UserAgent>
 
-Install all libwww-perl related modules
+Web user agent class
 
 =item L<LWP::Simple|LWP::Simple>
 
