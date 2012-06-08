@@ -1,6 +1,6 @@
 package Task::Kensho;
 use strict;
-our $VERSION = '0.31';
+our $VERSION = '0.32';
 
 __END__
 
@@ -189,6 +189,10 @@ Output XML from SAX2 Events
 =head2 Web Development: Task::Kensho::WebDev
 
 =over
+
+=item L<Plack>
+
+Flexible superglue between Web Servers and Perl Web Frameworks or code.
 
 =item L<Task::Catalyst|Task::Catalyst>
 
@@ -426,7 +430,7 @@ Easy access to any pastebin
 
 A modern perl interactive shell
 
-=item L<Module::Corelist|Module::Corelist>
+=item L<Module::CoreList|Module::CoreList>
 
 What modules shipped with versions of perl
 

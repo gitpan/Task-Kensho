@@ -3,11 +3,12 @@ abstract: 'A glimpse at an Enlightened Perl.'
 author:
   - 'Chris Prather <chris@prather.org>'
 build_requires:
-  ExtUtils::MakeMaker: 6.42
+  ExtUtils::MakeMaker: 6.36
 configure_requires:
-  ExtUtils::MakeMaker: 6.42
+  ExtUtils::MakeMaker: 6.36
 distribution_type: module
-generated_by: 'Module::Install version 1.00'
+dynamic_config: 1
+generated_by: 'Module::Install version 1.06'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -17,11 +18,6 @@ no_index:
   directory:
     - inc
     - t
-requires:
-  Task::Kensho::Exceptions: 0
-  Task::Kensho::OOP: 0
-  Task::Kensho::Testing: 0
-  Task::Kensho::Toolchain: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.31
+version: 0.32
