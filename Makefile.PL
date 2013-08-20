@@ -1,109 +1,67 @@
-# require a modern perl
-use 5.8.2;
 
-# Load the Module::Install bundled in ./inc/
-use inc::Module::Install;
+use strict;
+use warnings;
 
-BEGIN { $ENV{NYTPROF} = 'start=no'; }
+use 5.005;
 
-# Define metadata
-name 'Task-Kensho';
-abstract 'A glimpse at an Enlightened Perl.';
-author 'Chris Prather <chris@prather.org>';
-version_from 'lib/Task/Kensho.pm';
-license 'perl';
+use ExtUtils::MakeMaker 6.30;
 
-feature 'Basic Toolchain',
-  -default       => 1,
-  'Task::Kensho::Toolchain' => 0,
-  ;
 
-feature 'Testing',
-  -default              => 1,
-  'Task::Kensho::Testing' => 0,
-  ;
 
-feature 'Logging',
-  -default       => 1,
-  'Task::Kensho::Logging' => 0,
-  ;
+my %WriteMakefileArgs = (
+  "ABSTRACT" => "A Glimpse at an Enlightened Perl",
+  "AUTHOR" => "Chris Prather <chris\@prather.org>",
+  "BUILD_REQUIRES" => {},
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
+  },
+  "DISTNAME" => "Task-Kensho",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "Task::Kensho",
+  "PREREQ_PM" => {},
+  "TEST_REQUIRES" => {
+    "Capture::Tiny" => "0",
+    "Test::More" => "0.94",
+    "blib" => "0"
+  },
+  "VERSION" => "0.34",
+  "test" => {
+    "TESTS" => "t/*.t"
+  }
+);
 
-feature 'Exception Handling',
-  -default    => 1,
-  'Task::Kensho::Exceptions' => 0,
-  ;
 
-feature 'Object Oriented Programming',
-  -default      => 1,
-  'Task::Kensho::OOP' => 0,
-  ;
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
+  my $tr = delete $WriteMakefileArgs{TEST_REQUIRES};
+  my $br = $WriteMakefileArgs{BUILD_REQUIRES};
+  for my $mod ( keys %$tr ) {
+    if ( exists $br->{$mod} ) {
+      $br->{$mod} = $tr->{$mod} if $tr->{$mod} > $br->{$mod};
+    }
+    else {
+      $br->{$mod} = $tr->{$mod};
+    }
+  }
+}
 
-feature 'Asynchronous Programming',
-  -default => 0,
-  'Task::Kensho::Async'    => 0,
-  ;
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
+  my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
+  my $pp = $WriteMakefileArgs{PREREQ_PM};
+  for my $mod ( keys %$br ) {
+    if ( exists $pp->{$mod} ) {
+      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
+    }
+    else {
+      $pp->{$mod} = $br->{$mod};
+    }
+  }
+}
 
-feature 'XML Development',
-  -default                   => 0,
-  'Task::Kensho::XML' => 0,
-  ;
+delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
+  unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
 
-feature 'Web Development',
-  -default                         => 0,
-  'Task::Kensho::WebDev' => 0,
-  ;
+WriteMakefile(%WriteMakefileArgs);
 
-feature 'Web Crawling',
-  -default                      => 0,
-  'Task::Kensho::WebCrawling' => 0,
-  ;
 
-feature 'Database Development',
-  -default                      => 0,
-  'Task::Kensho::DBDev' => 0,
-  ;
 
-feature 'Excel / CSV',
-  -default                          => 0,
-  'Task::Kensho::ExcelCSV' => 0,
-  ;
-
-feature 'Module Development',
-  -default            => 0,
-  'Task::Kensho::ModuleDev' => 0,
-  ;
-
-feature 'Email Modules',
-  -default           => 0,
-  'Task::Kensho::Email' => 0,
-  ;
-
-feature 'Date Modules',
-  -default          => 0,
-  'Task::Kensho::Dates' => 0,
-  ;
-
-feature 'Scalability',
-  -default          => 0,
-  'Task::Kensho::Scalability' => 0,
-  ;
-
-feature 'Config Modules',
-  -default          => 0,
-  'Task::Kensho::Config' => 0,
-  ;
-
-feature 'Useful Command-line Tools',
-  -default           => 0,
-  'Task::Kensho::CLI' => 0,
-  ;
-
-feature 'Script Hackery',
-  -default                    => 0,
-  'Task::Kensho::Hackery' => 0,
-  ;
-
-auto_set_repository;
-auto_manifest;
-auto_install;
-WriteAll;
