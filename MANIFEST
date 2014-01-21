@@ -11,6 +11,7 @@ README
 README.md
 lib/Task/Kensho.pm
 t/00-report-prereqs.t
+weaver.ini
 xt/author/00-compile.t
 xt/author/pod-spell.t
 xt/release/changes_has_content.t

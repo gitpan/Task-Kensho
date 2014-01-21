@@ -99,7 +99,7 @@ optional_features:
 provides:
   Task::Kensho:
     file: lib/Task/Kensho.pm
-    version: 0.34001
+    version: 0.34002
 recommends:
   Task::Kensho::Async: 0
   Task::Kensho::CLI: 0
@@ -127,7 +127,7 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Task-Kensho
   homepage: https://github.com/EnlightenedPerlOrganisation/task-kensho
   repository: https://github.com/EnlightenedPerlOrganisation/task-kensho.git
-version: 0.34001
+version: 0.34002
 x_Dist_Zilla:
   perl:
     version: 5.019007
@@ -612,6 +612,14 @@ x_Dist_Zilla:
               class: Pod::Weaver::Section::Legal
               name: '@Default/Legal'
               version: 4.006
+            -
+              class: Pod::Weaver::Plugin::Transformer
+              name: '-Transformer'
+              version: 4.006
+            -
+              class: Pod::Weaver::Plugin::StopWords
+              name: '-StopWords'
+              version: 1.008
       name: '@Author::ETHER/PodWeaver'
       version: 4.005
     -
@@ -747,10 +755,6 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::Git::Tag
       name: '@Author::ETHER/Git::Tag'
       version: 2.019
-    -
-      class: Dist::Zilla::Plugin::GitHub::Update
-      name: '@Author::ETHER/GitHub::Update'
-      version: 0.36
     -
       class: Dist::Zilla::Plugin::Git::Push
       name: '@Author::ETHER/Git::Push'
