@@ -99,7 +99,7 @@ optional_features:
 provides:
   Task::Kensho:
     file: lib/Task/Kensho.pm
-    version: 0.34002
+    version: 0.34003
 recommends:
   Task::Kensho::Async: 0
   Task::Kensho::CLI: 0
@@ -124,10 +124,10 @@ requires:
   strict: 0
   warnings: 0
 resources:
-  bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Task-Kensho
+  bugtracker: https://github.com/EnlightenedPerlOrganisation/task-kensho/issues
   homepage: https://github.com/EnlightenedPerlOrganisation/task-kensho
   repository: https://github.com/EnlightenedPerlOrganisation/task-kensho.git
-version: 0.34002
+version: 0.34003
 x_Dist_Zilla:
   perl:
     version: 5.019007
@@ -837,6 +837,6 @@ x_Dist_Zilla:
   zilla:
     class: Dist::Zilla::Dist::Builder
     config:
-      is_trial: 1
+      is_trial: 0
     version: 5.012
 x_authority: cpan:PERIGRIN
