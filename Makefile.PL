@@ -8,8 +8,8 @@ use warnings;
 
 BEGIN {
 my %configure_requires = (
+    'Module::Build::Tiny' => '0.034',
     'ExtUtils::MakeMaker' => '6.30',
-    'Module::Build::Tiny' => '0.033',
 );
 
 my @missing = grep {
@@ -73,7 +73,7 @@ my %WriteMakefileArgs = (
   "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30",
-    "Module::Build::Tiny" => "0.033"
+    "Module::Build::Tiny" => "0.034"
   },
   "DISTNAME" => "Task-Kensho",
   "EXE_FILES" => [],
@@ -89,7 +89,7 @@ my %WriteMakefileArgs = (
     "List::Util" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "0.34003",
+  "VERSION" => "0.34004",
   "test" => {
     "TESTS" => "t/*.t"
   }
