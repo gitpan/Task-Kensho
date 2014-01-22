@@ -5,7 +5,7 @@ BEGIN {
   $Task::Kensho::AUTHORITY = 'cpan:PERIGRIN';
 }
 # git description: v0.34002-TRIAL-28-g65ed0ec
-$Task::Kensho::VERSION = '0.34003';
+$Task::Kensho::VERSION = '0.34003'; # TRIAL
 # ABSTRACT: A Glimpse at an Enlightened Perl
 
 __END__

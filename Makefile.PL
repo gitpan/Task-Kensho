@@ -8,8 +8,8 @@ use warnings;
 
 BEGIN {
 my %configure_requires = (
-    'Module::Build::Tiny' => '0.033',
     'ExtUtils::MakeMaker' => '6.30',
+    'Module::Build::Tiny' => '0.033',
 );
 
 my @missing = grep {
