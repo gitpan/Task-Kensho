@@ -10,6 +10,7 @@ Makefile.PL
 README
 README.md
 lib/Task/Kensho.pm
+release.sh
 t/00-report-prereqs.t
 weaver.ini
 xt/author/00-compile.t

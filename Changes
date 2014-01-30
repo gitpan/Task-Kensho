@@ -1,5 +1,9 @@
 Revision history for Task-Kensho
 
+0.35      2014-01-30
+          - updated recommendations for Async, CLI, ModuleDev, Scalability,
+            WebDev
+
 0.34004   2014-01-22 (TRIAL RELEASE)
           - still more pod and metadata tweaks
 

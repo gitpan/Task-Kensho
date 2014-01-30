@@ -4,8 +4,8 @@ package Task::Kensho;
 BEGIN {
   $Task::Kensho::AUTHORITY = 'cpan:PERIGRIN';
 }
-# git description: v0.34003-TRIAL-22-g4bb0928
-$Task::Kensho::VERSION = '0.34004'; # TRIAL
+# git description: v0.34004-TRIAL-37-g8033a12
+$Task::Kensho::VERSION = '0.35';
 # ABSTRACT: A Glimpse at an Enlightened Perl
 
 __END__
@@ -15,8 +15,8 @@ __END__
 =encoding UTF-8
 
 =for :stopwords Chris Prather Buddhism EPO Kenshō nonduality amongst Organisation
-installable Async pastebin CSV whippitupitude Hackery profiler templated
-configs RSS libxml libxml2 libxslt
+installable Async pastebin Bundler CSV whippitupitude Hackery profiler
+templated Redis configs RSS libxml libxml2 libxslt RDF
 
 =head1 NAME
 
@@ -24,7 +24,7 @@ Task::Kensho - A Glimpse at an Enlightened Perl
 
 =head1 VERSION
 
-version 0.34004
+version 0.35
 
 =head1 SYNOPSIS
 
@@ -75,6 +75,10 @@ facilitates the ease and simplicity the distribution aims to achieve.
 
 =head3
 
+L<IO::Async>
+
+Asynchronous event-driven programming
+
 L<POE>
 
 Multitasking and networking framework for Perl
@@ -91,13 +95,21 @@ L<App::Nopaste>
 
 Easy access to any pastebin
 
+L<App::cpanminus>
+
+get, unpack, build and install modules from CPAN
+
 L<App::perlbrew>
 
 Manage perl installations in your $HOME
 
+L<Carton>
+
+Perl module dependency manager (aka Bundler for Perl)
+
 L<Devel::REPL>
 
-A modern perl interactive shell
+a modern perl interactive shell
 
 L<Module::CoreList>
 
@@ -273,9 +285,9 @@ L<Modern::Perl>
 
 enable all of the features of Modern Perl with one command
 
-L<Module::Install>
+L<Module::Build::Tiny>
 
-Standalone, extensible Perl module installer
+A simple, lightweight, drop-in replacement for ExtUtils::MakeMaker or Module::Build
 
 L<Perl::Critic>
 
@@ -312,6 +324,10 @@ Moose is a postmodern object system for Perl5. Task::Moose installs Moose and op
 L<CHI>
 
 A unified cache interface, like DBI
+
+L<Redis>
+
+Perl binding for Redis database
 
 =head2 L<Task::Kensho::Testing>: Testing
 
@@ -377,7 +393,11 @@ Perl extension for Version Objects
 
 =head3
 
-L<HTTP::Lite>
+L<HTTP::Thin>
+
+A Thin Wrapper around HTTP::Tiny to play nice with HTTP::Message
+
+L<HTTP::Tiny>
 
 Lightweight HTTP client implementation
 
@@ -405,9 +425,17 @@ L<CGI::FormBuilder::Source::Perl>
 
 Build CGI::FormBuilder configs from Perl syntax files.
 
+L<Dancer>
+
+A lightweight yet powerful web application framework
+
 L<MIME::Types>
 
 Definition of MIME types
+
+L<Mojolicious>
+
+Real-time web framework
 
 L<Plack>
 
@@ -432,6 +460,10 @@ Creates and updates RSS files
 =head2 L<Task::Kensho::XML>: XML Development
 
 =head3
+
+L<RDF::Trine>
+
+An RDF Framework for Perl
 
 L<XML::Generator::PerlData>
 
@@ -462,12 +494,6 @@ regarding which modules you wish to install.
 The C<cpanm> client requires interactive mode to be enabled for this to work:
 
     cpanm --interactive Task-Kensho
-
-=head1 RELEASE SCHEDULE
-
-Starting with release 0.18, L<Task::Kensho> was moved to a monthly release
-cycle. This will facilitate a consistent schedule for upstream vendors
-to track the changes in L<Task::Kensho>.
 
 =head1 BUGS AND LIMITATIONS
 
