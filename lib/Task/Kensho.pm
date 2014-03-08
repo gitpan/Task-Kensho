@@ -4,8 +4,8 @@ package Task::Kensho;
 BEGIN {
   $Task::Kensho::AUTHORITY = 'cpan:PERIGRIN';
 }
-# git description: v0.34004-TRIAL-37-g8033a12
-$Task::Kensho::VERSION = '0.35';
+# git description: v0.35-40-g3f6022b
+$Task::Kensho::VERSION = '0.36';
 # ABSTRACT: A Glimpse at an Enlightened Perl
 
 __END__
@@ -14,9 +14,10 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Chris Prather Buddhism EPO Kenshō nonduality amongst Organisation
-installable Async pastebin Bundler CSV whippitupitude Hackery profiler
-templated Redis configs RSS libxml libxml2 libxslt RDF
+=for :stopwords Chris Prather Andrew Lapworth Whatson Nehren Florian Ragwitz Karen
+Etheridge Leo Buddhism EPO Kenshō nonduality amongst Organisation
+installable Async pastebin CSV whippitupitude Hackery profiler templated
+Redis Bundler configs RSS libxml libxml2 libxslt RDF
 
 =head1 NAME
 
@@ -24,7 +25,7 @@ Task::Kensho - A Glimpse at an Enlightened Perl
 
 =head1 VERSION
 
-version 0.35
+version 0.36
 
 =head1 SYNOPSIS
 
@@ -44,7 +45,7 @@ subject and object."[3]
 
 =back
 
-L<Task::Kensho> is a first cut at building a list of recommended modules
+L<Task::Kensho> is a list of recommended modules
 for Enlightened Perl development. CPAN is wonderful, but there are too
 many wheels and you have to pick and choose amongst the various
 competing technologies.
@@ -73,157 +74,129 @@ facilitates the ease and simplicity the distribution aims to achieve.
 
 =head2 L<Task::Kensho::Async>: Async Programming
 
-=head3
-
-L<IO::Async>
+=head3 L<IO::Async>
 
 Asynchronous event-driven programming
 
-L<POE>
+=head3 L<POE>
 
 Multitasking and networking framework for Perl
 
 =head2 L<Task::Kensho::CLI>: Useful Command-line Tools
 
-=head3
-
-L<App::Ack>
+=head3 L<App::Ack>
 
 A grep-like text finder
 
-L<App::Nopaste>
+=head3 L<App::Nopaste>
 
 Easy access to any pastebin
 
-L<App::cpanminus>
-
-get, unpack, build and install modules from CPAN
-
-L<App::perlbrew>
-
-Manage perl installations in your $HOME
-
-L<Carton>
-
-Perl module dependency manager (aka Bundler for Perl)
-
-L<Devel::REPL>
+=head3 L<Devel::REPL>
 
 a modern perl interactive shell
 
-L<Module::CoreList>
+=head3 L<Module::CoreList>
 
 What modules shipped with versions of perl
 
 =head2 L<Task::Kensho::Config>: Config Modules
 
-=head3
-
-L<Config::Any>
+=head3 L<Config::Any>
 
 Load configuration from different file formats, transparently
 
-L<Config::General>
+=head3 L<Config::General>
 
 Generic Config Module
 
 =head2 L<Task::Kensho::DBDev>: Database Development
 
-=head3
-
-L<DBD::SQLite>
+=head3 L<DBD::SQLite>
 
 Self Contained RDBMS in a DBI Driver
 
-L<DBI>
+=head3 L<DBI>
 
 Database independent interface for Perl
 
-L<DBIx::Class>
+=head3 L<DBIx::Class>
 
 Extensible and flexible object <-> relational mapper.
 
-L<DBIx::Class::Schema::Loader>
+=head3 L<DBIx::Class::Schema::Loader>
 
 Dynamic definition of a DBIx::Class::Schema
 
-L<SQL::Translator>
+=head3 L<SQL::Translator>
 
 Manipulate structured data definitions (SQL and more)
 
 =head2 L<Task::Kensho::Dates>: Date Modules
 
-=head3
-
-L<Date::Tiny>
+=head3 L<Date::Tiny>
 
 A date object with as little code as possible
 
-L<DateTime>
+=head3 L<DateTime>
 
 A date and time object
 
-L<DateTime::Tiny>
+=head3 L<DateTime::Tiny>
 
-A date object with as little code as possible
+A date time object with as little code as possible
 
-L<Time::ParseDate>
+=head3 L<Time::ParseDate>
 
 Date parsing both relative and absolute
 
-L<Time::Tiny>
+=head3 L<Time::Tiny>
 
 A time object with as little code as possible
 
 =head2 L<Task::Kensho::Email>: Email
 
-=head3
-
-L<Email::MIME::Kit>
+=head3 L<Email::MIME::Kit>
 
 The Swiss army chainsaw of assembling email messages
 
-L<Email::Sender>
+=head3 L<Email::Sender>
 
 A library for sending email
 
-L<Email::Simple>
+=head3 L<Email::Simple>
 
 A B<simple> email object. No, really!
 
-L<Email::Valid>
+=head3 L<Email::Valid>
 
 Check validity of Internet email addresses
 
 =head2 L<Task::Kensho::ExcelCSV>: Excel/CSV
 
-=head3
-
-L<Spreadsheet::ParseExcel::Simple>
+=head3 L<Spreadsheet::ParseExcel::Simple>
 
 A simple interface to Excel data
 
-L<Spreadsheet::WriteExcel::Simple>
+=head3 L<Spreadsheet::WriteExcel::Simple>
 
 Create Excel documents easily
 
-L<Text::CSV_XS>
+=head3 L<Text::CSV_XS>
 
 Manipulate comma-separated values (CSV)
 
 =head2 L<Task::Kensho::Exceptions>: Exception Handling
 
-=head3
-
-L<Try::Tiny>
+=head3 L<Try::Tiny>
 
 Lightweight exception handling that handles the vagaries of $@.
 
-L<TryCatch>
+=head3 L<TryCatch>
 
 Flexible exception handling without source filters, handles $@ properly.
 
-L<autodie>
+=head3 L<autodie>
 
 Make builtins and other functions die instead of returning undef on failure.
 
@@ -231,257 +204,257 @@ Make builtins and other functions die instead of returning undef on failure.
 
 These packages are included less for production work and more for whippitupitude. They reflect packages that people have found incredibly useful for prototyping and debugging before reducing down to a production script.
 
-=head3
-
-L<IO::All>
+=head3 L<IO::All>
 
 IO::All combines all of the best Perl IO modules into a single nifty object oriented interface to greatly simplify your everyday Perl IO idioms.
 
-L<Smart::Comments>
+=head3 L<Smart::Comments>
 
 Comments that do more than just sit there
 
-L<Term::ProgressBar::Simple>
+=head3 L<Term::ProgressBar::Simple>
 
 Simple progress bars
 
 =head2 L<Task::Kensho::Logging>: Logging
 
-=head3
-
-L<Log::Contextual>
+=head3 L<Log::Contextual>
 
 Log::Contextual is a simple interface to extensible logging.  It is bundled with a really basic logger, Log::Contextual::SimpleLogger.
 
-L<Log::Dispatch>
+=head3 L<Log::Dispatch>
 
 This module manages a set of Log::Dispatch::* output objects that can be logged to via a unified interface.
 
-L<Log::Log4perl>
+=head3 L<Log::Log4perl>
 
 Log::Log4perl lets you remote-control and fine-tune the logging behaviour of your system from the outside. It implements the widely popular (Java-based) Log4j logging package in pure Perl.
 
 =head2 L<Task::Kensho::ModuleDev>: Module Development
 
-=head3
-
-L<CPAN::Uploader>
+=head3 L<CPAN::Uploader>
 
 Upload things to the CPAN
 
-L<Carp::Always>
+=head3 L<Carp::Always>
 
 Warns and dies noisily with stack backtraces
 
-L<Devel::NYTProf>
+=head3 L<Devel::NYTProf>
 
 Powerful feature-rich perl source code profiler
 
-L<Dist::Zilla>
+=head3 L<Dist::Zilla>
 
 Builds distributions of code to be uploaded to the CPAN.
 
-L<Modern::Perl>
+=head3 L<Modern::Perl>
 
 enable all of the features of Modern Perl with one command
 
-L<Module::Build::Tiny>
+=head3 L<Module::Build::Tiny>
 
 A simple, lightweight, drop-in replacement for ExtUtils::MakeMaker or Module::Build
 
-L<Perl::Critic>
+=head3 L<Perl::Critic>
 
 Critique Perl source code for best-practices.
 
-L<Perl::Tidy>
+=head3 L<Perl::Tidy>
 
 Parses and beautifies perl source
 
-L<Perl::Version>
+=head3 L<Perl::Version>
 
 Parse and manipulate Perl version strings
 
-L<Pod::Readme>
+=head3 L<Pod::Readme>
 
 Convert POD to README file
 
-L<Software::License>
+=head3 L<Software::License>
 
 Packages that provide templated software licenses
 
 =head2 L<Task::Kensho::OOP>: Object Oriented Programming
 
-=head3
-
-L<Task::Moose>
+=head3 L<Task::Moose>
 
 Moose is a postmodern object system for Perl5. Task::Moose installs Moose and optionally a list of recommended modules that extend Moose.
 
 =head2 L<Task::Kensho::Scalability>: Scalability
 
-=head3
-
-L<CHI>
+=head3 L<CHI>
 
 A unified cache interface, like DBI
 
-L<Redis>
+=head3 L<Redis>
 
 Perl binding for Redis database
 
 =head2 L<Task::Kensho::Testing>: Testing
 
-=head3
-
-L<Devel::Cover>
+=head3 L<Devel::Cover>
 
 Code coverage metrics for Perl
 
-L<Test::Deep>
+=head3 L<Test::Deep>
 
 Test deep data structures
 
-L<Test::Fatal>
+=head3 L<Test::Fatal>
 
 Test exception-based code
 
-L<Test::Memory::Cycle>
+=head3 L<Test::Memory::Cycle>
 
 Check for memory leaks and circular memory references
 
-L<Test::Most>
+=head3 L<Test::Most>
 
 Most commonly needed test functions and features.
 
-L<Test::NoWarnings>
+=head3 L<Test::NoWarnings>
 
 Ensure that no (unexpected) warnings occur during testing
 
-L<Test::Pod>
+=head3 L<Test::Pod>
 
 Check for POD errors in files
 
-L<Test::Pod::Coverage>
+=head3 L<Test::Pod::Coverage>
 
 Check for pod coverage in your distribution.
 
-L<Test::Requires>
+=head3 L<Test::Requires>
 
 Make running a test conditional on a particular module being installed
 
-L<Test::Simple>
+=head3 L<Test::Simple>
 
 Basic utilities for writing tests.
 
 =head2 L<Task::Kensho::Toolchain>: Basic Toolchain
 
-=head3
-
-L<App::cpanminus>
+=head3 L<App::cpanminus>
 
 Get, unpack, build and install modules from CPAN
 
-L<local::lib>
+=head3 L<App::perlbrew>
+
+Manage perl installations in your $HOME
+
+=head3 L<CPAN::Mini>
+
+Create a minimal mirror of CPAN
+
+=head3 L<Carton>
+
+Perl module dependency manager (aka Bundler for Perl)
+
+=head3 L<local::lib>
 
 Create and use a local lib/ for perl modules with PERL5LIB
 
-L<version>
+=head3 L<version>
 
 Perl extension for Version Objects
 
 =head2 L<Task::Kensho::WebCrawling>: Web Crawling
 
-=head3
-
-L<HTTP::Thin>
+=head3 L<HTTP::Thin>
 
 A Thin Wrapper around HTTP::Tiny to play nice with HTTP::Message
 
-L<HTTP::Tiny>
+=head3 L<HTTP::Tiny>
 
 Lightweight HTTP client implementation
 
-L<LWP::Simple>
+=head3 L<LWP::Simple>
 
 Simple procedural interface to LWP
 
-L<LWP::UserAgent>
+=head3 L<LWP::UserAgent>
 
 Full-featured Web client library for Perl
 
-L<WWW::Mechanize>
+=head3 L<WWW::Mechanize>
 
 Handy web browsing in a Perl object
 
-L<WWW::Mechanize::TreeBuilder>
+=head3 L<WWW::Mechanize::TreeBuilder>
 
 This module combines WWW::Mechanize and HTML::TreeBuilder.
 
+=head3 L<WWW::Selenium>
+
+Perl Client for the Selenium Remote Control test tool
+
 =head2 L<Task::Kensho::WebDev>: Web Development
 
-=head3
-
-L<CGI::FormBuilder::Source::Perl>
+=head3 L<CGI::FormBuilder::Source::Perl>
 
 Build CGI::FormBuilder configs from Perl syntax files.
 
-L<Dancer>
+=head3 L<Dancer>
 
 A lightweight yet powerful web application framework
 
-L<MIME::Types>
+=head3 L<HTML::FormHandler>
+
+HTML forms using Moose
+
+=head3 L<MIME::Types>
 
 Definition of MIME types
 
-L<Mojolicious>
+=head3 L<Mojolicious>
 
 Real-time web framework
 
-L<Plack>
+=head3 L<Plack>
 
 Flexible superglue between Web Servers and Perl Web Frameworks or code.
 
-L<Task::Catalyst>
+=head3 L<Task::Catalyst>
 
 Catalyst is The Elegant MVC Web Application Framework. Task::Catalyst is all you need to start with Catalyst.
 
-L<Template::Toolkit>
+=head3 L<Template::Toolkit>
 
 Template Processing System
 
-L<XML::Atom>
+=head3 L<XML::Atom>
 
 Atom feed and API implementation
 
-L<XML::RSS>
+=head3 L<XML::RSS>
 
 Creates and updates RSS files
 
 =head2 L<Task::Kensho::XML>: XML Development
 
-=head3
-
-L<RDF::Trine>
+=head3 L<RDF::Trine>
 
 An RDF Framework for Perl
 
-L<XML::Generator::PerlData>
+=head3 L<XML::Generator::PerlData>
 
 Perl extension for generating SAX2 events from nested Perl data structures.
 
-L<XML::LibXML>
+=head3 L<XML::LibXML>
 
 Perl Binding for libxml2
 
-L<XML::LibXSLT>
+=head3 L<XML::LibXSLT>
 
 Interface to the gnome libxslt library
 
-L<XML::SAX>
+=head3 L<XML::SAX>
 
 Simple/Streaming API for XML
 
-L<XML::SAX::Writer>
+=head3 L<XML::SAX::Writer>
 
 Output XML from SAX2 Events
 
@@ -493,7 +466,7 @@ regarding which modules you wish to install.
 
 The C<cpanm> client requires interactive mode to be enabled for this to work:
 
-    cpanm --interactive Task-Kensho
+    cpanm --interactive Task::Kensho
 
 =head1 BUGS AND LIMITATIONS
 
@@ -521,5 +494,35 @@ This software is copyright (c) 2008 by Chris Prather.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
+
+=head1 CONTRIBUTORS
+
+=over 4
+
+=item *
+
+Andrew Whatson <whatson@gmail.com>
+
+=item *
+
+Chris Nehren <apeiron@cpan.org>
+
+=item *
+
+Chris Prather <cprather@hdpublishing.com>
+
+=item *
+
+Florian Ragwitz <rafl@debian.org>
+
+=item *
+
+Karen Etheridge <ether@cpan.org>
+
+=item *
+
+Leo Lapworth <leo@cuckoo.org>
+
+=back
 
 =cut

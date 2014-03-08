@@ -46,16 +46,17 @@ my $static_prereqs = do { my $x = {
        'configure' => {
                         'requires' => {
                                         'ExtUtils::MakeMaker' => '6.30',
-                                        'Module::Build::Tiny' => '0.034'
+                                        'Module::Build::Tiny' => '0.035'
                                       }
                       },
        'develop' => {
                       'recommends' => {
-                                        'Dist::Zilla::PluginBundle::Author::ETHER' => '0.049'
+                                        'Dist::Zilla::PluginBundle::Author::ETHER' => '0.052'
                                       },
                       'requires' => {
                                       'Config::Any' => '0',
-                                      'Dist::Zilla' => '5.012',
+                                      'Dist::Zilla' => '5.013',
+                                      'Dist::Zilla::Plugin::ContributorsFromGit' => '0',
                                       'Dist::Zilla::Plugin::GitHub::Update' => '0',
                                       'Dist::Zilla::Plugin::GithubMeta' => '0',
                                       'Dist::Zilla::Plugin::MakeMaker::Fallback' => '0',
@@ -66,18 +67,14 @@ my $static_prereqs = do { my $x = {
                                       'Dist::Zilla::Plugin::PromptIfStale' => '0',
                                       'Dist::Zilla::Plugin::PruneCruft' => '0',
                                       'Dist::Zilla::PluginBundle::Author::ETHER' => '0.048',
-                                      'Dist::Zilla::Role::FileFinderUser' => '0',
-                                      'Dist::Zilla::Role::FileMunger' => '0',
-                                      'Dist::Zilla::Role::TextTemplate' => '0',
                                       'File::Spec' => '0',
-                                      'Hash::Merge::Simple' => '0',
                                       'IO::Handle' => '0',
                                       'IPC::Open3' => '0',
-                                      'List::Util' => '0',
                                       'Moose' => '0',
                                       'MooseX::SimpleConfig' => '0',
                                       'Path::Tiny' => '0',
                                       'Pod::Coverage::TrustPod' => '0',
+                                      'Pod::Weaver::Section::Contributors' => '0',
                                       'Test::CPAN::Changes' => '0.19',
                                       'Test::CPAN::Meta' => '0',
                                       'Test::Kwalitee' => '1.12',
