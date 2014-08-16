@@ -4,8 +4,8 @@ package Task::Kensho;
 BEGIN {
   $Task::Kensho::AUTHORITY = 'cpan:PERIGRIN';
 }
-# git description: v0.35-40-g3f6022b
-$Task::Kensho::VERSION = '0.36';
+# git description: v0.36-37-g68c2f8b
+$Task::Kensho::VERSION = '0.37';
 # ABSTRACT: A Glimpse at an Enlightened Perl
 
 __END__
@@ -14,24 +14,21 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Chris Prather Andrew Lapworth Whatson Nehren Florian Ragwitz Karen
-Etheridge Leo Buddhism EPO Kenshō nonduality amongst Organisation
-installable Async pastebin CSV whippitupitude Hackery profiler templated
-Redis Bundler configs RSS libxml libxml2 libxslt RDF
-
 =head1 NAME
 
 Task::Kensho - A Glimpse at an Enlightened Perl
 
 =head1 VERSION
 
-version 0.36
+version 0.37
 
 =head1 SYNOPSIS
 
     > cpanm --interactive Task::Kensho
 
 =head1 DESCRIPTION
+
+=for stopwords Buddhism EPO Kenshō nonduality amongst Organisation installable
 
 From L<http://en.wikipedia.org/wiki/Kensho>:
 
@@ -72,6 +69,8 @@ facilitates the ease and simplicity the distribution aims to achieve.
 
 =head1 RECOMMENDED MODULES
 
+=for stopwords Async
+
 =head2 L<Task::Kensho::Async>: Async Programming
 
 =head3 L<IO::Async>
@@ -81,6 +80,8 @@ Asynchronous event-driven programming
 =head3 L<POE>
 
 Multitasking and networking framework for Perl
+
+=for stopwords pastebin
 
 =head2 L<Task::Kensho::CLI>: Useful Command-line Tools
 
@@ -172,6 +173,8 @@ A B<simple> email object. No, really!
 
 Check validity of Internet email addresses
 
+=for stopwords CSV
+
 =head2 L<Task::Kensho::ExcelCSV>: Excel/CSV
 
 =head3 L<Spreadsheet::ParseExcel::Simple>
@@ -199,6 +202,8 @@ Flexible exception handling without source filters, handles $@ properly.
 =head3 L<autodie>
 
 Make builtins and other functions die instead of returning undef on failure.
+
+=for stopwords whippitupitude Hackery
 
 =head2 L<Task::Kensho::Hackery>: Script Hackery
 
@@ -230,15 +235,25 @@ This module manages a set of Log::Dispatch::* output objects that can be logged 
 
 Log::Log4perl lets you remote-control and fine-tune the logging behaviour of your system from the outside. It implements the widely popular (Java-based) Log4j logging package in pure Perl.
 
+=for stopwords profiler templated
+
 =head2 L<Task::Kensho::ModuleDev>: Module Development
 
 =head3 L<CPAN::Uploader>
 
 Upload things to the CPAN
 
-=head3 L<Carp::Always>
+=head3 L<Data::Printer>
 
-Warns and dies noisily with stack backtraces
+Colored pretty-print of Perl data structures and objects
+
+=head3 L<Devel::Confess>
+
+Include stack traces on all warnings and errors
+
+=head3 L<Devel::Dwarn>
+
+Combine warns and Data::Dumper::Concise
 
 =head3 L<Devel::NYTProf>
 
@@ -281,6 +296,8 @@ Packages that provide templated software licenses
 =head3 L<Task::Moose>
 
 Moose is a postmodern object system for Perl5. Task::Moose installs Moose and optionally a list of recommended modules that extend Moose.
+
+=for stopwords Redis
 
 =head2 L<Task::Kensho::Scalability>: Scalability
 
@@ -334,7 +351,13 @@ Make running a test conditional on a particular module being installed
 
 Basic utilities for writing tests.
 
+=for stopwords Bundler
+
 =head2 L<Task::Kensho::Toolchain>: Basic Toolchain
+
+=head3 L<App::FatPacker>
+
+Pack your dependencies onto your script file
 
 =head3 L<App::cpanminus>
 
@@ -351,6 +374,10 @@ Create a minimal mirror of CPAN
 =head3 L<Carton>
 
 Perl module dependency manager (aka Bundler for Perl)
+
+=head3 L<Pinto>
+
+Curate a repository of Perl modules
 
 =head3 L<local::lib>
 
@@ -389,6 +416,8 @@ This module combines WWW::Mechanize and HTML::TreeBuilder.
 =head3 L<WWW::Selenium>
 
 Perl Client for the Selenium Remote Control test tool
+
+=for stopwords configs RSS
 
 =head2 L<Task::Kensho::WebDev>: Web Development
 
@@ -431,6 +460,8 @@ Atom feed and API implementation
 =head3 L<XML::RSS>
 
 Creates and updates RSS files
+
+=for stopwords libxml libxml2 libxslt RDF
 
 =head2 L<Task::Kensho::XML>: XML Development
 
@@ -497,15 +528,21 @@ the same terms as the Perl 5 programming language system itself.
 
 =head1 CONTRIBUTORS
 
+=for stopwords Karen Etheridge Chris Nehren Leo Lapworth Prather Florian Ragwitz Andrew Whatson
+
 =over 4
 
 =item *
 
-Andrew Whatson <whatson@gmail.com>
+Karen Etheridge <ether@cpan.org>
 
 =item *
 
 Chris Nehren <apeiron@cpan.org>
+
+=item *
+
+Leo Lapworth <leo@cuckoo.org>
 
 =item *
 
@@ -517,11 +554,7 @@ Florian Ragwitz <rafl@debian.org>
 
 =item *
 
-Karen Etheridge <ether@cpan.org>
-
-=item *
-
-Leo Lapworth <leo@cuckoo.org>
+Andrew Whatson <whatson@gmail.com>
 
 =back
 
