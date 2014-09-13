@@ -8,8 +8,7 @@ build_requires:
   Test::More: '0'
 configure_requires:
   ExtUtils::MakeMaker: '0'
-  Module::Build::Tiny: '0.037'
-dynamic_config: 0
+dynamic_config: 1
 generated_by: 'Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142060'
 license: perl
 meta-spec:
@@ -97,7 +96,7 @@ optional_features:
 provides:
   Task::Kensho:
     file: lib/Task/Kensho.pm
-    version: '0.37'
+    version: '0.38'
 recommends:
   Task::Kensho::Async: '0'
   Task::Kensho::CLI: '0'
@@ -125,11 +124,18 @@ resources:
   bugtracker: https://github.com/EnlightenedPerlOrganisation/task-kensho/issues
   homepage: https://github.com/EnlightenedPerlOrganisation/task-kensho
   repository: https://github.com/EnlightenedPerlOrganisation/task-kensho.git
-version: '0.37'
+version: '0.38'
 x_Dist_Zilla:
   perl:
-    version: '5.021002'
+    version: '5.021003'
   plugins:
+    -
+      class: inc::MakeMaker
+      config:
+        Dist::Zilla::Role::TestRunner:
+          default_jobs: '9'
+      name: =inc::MakeMaker
+      version: ~
     -
       class: Dist::Zilla::Plugin::MungeFile::WithConfigFile
       config:
@@ -154,8 +160,8 @@ x_Dist_Zilla:
             Task::Kensho::Async: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/Async
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/Async feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -169,8 +175,8 @@ x_Dist_Zilla:
             Task::Kensho::CLI: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/CLI
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/CLI feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -184,8 +190,8 @@ x_Dist_Zilla:
             Task::Kensho::Config: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/Config
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/Config feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -199,8 +205,8 @@ x_Dist_Zilla:
             Task::Kensho::DBDev: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/DBDev
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/DBDev feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -214,8 +220,8 @@ x_Dist_Zilla:
             Task::Kensho::Dates: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/Dates
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/Dates feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -229,8 +235,8 @@ x_Dist_Zilla:
             Task::Kensho::Email: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/Email
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/Email feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -244,8 +250,8 @@ x_Dist_Zilla:
             Task::Kensho::ExcelCSV: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/ExcelCSV
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/ExcelCSV feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -259,8 +265,8 @@ x_Dist_Zilla:
             Task::Kensho::Exceptions: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/Exceptions
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/Exceptions feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -274,8 +280,8 @@ x_Dist_Zilla:
             Task::Kensho::Hackery: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/Hackery
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/Hackery feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -289,8 +295,8 @@ x_Dist_Zilla:
             Task::Kensho::Logging: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/Logging
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/Logging feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -304,8 +310,8 @@ x_Dist_Zilla:
             Task::Kensho::ModuleDev: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/ModuleDev
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/ModuleDev feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -319,8 +325,8 @@ x_Dist_Zilla:
             Task::Kensho::OOP: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/OOP
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/OOP feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -334,8 +340,8 @@ x_Dist_Zilla:
             Task::Kensho::Scalability: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/Scalability
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/Scalability feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -349,8 +355,8 @@ x_Dist_Zilla:
             Task::Kensho::Testing: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/Testing
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/Testing feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -364,8 +370,8 @@ x_Dist_Zilla:
             Task::Kensho::Toolchain: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/Toolchain
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/Toolchain feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -379,8 +385,8 @@ x_Dist_Zilla:
             Task::Kensho::WebCrawling: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/WebCrawling
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/WebCrawling feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -394,8 +400,8 @@ x_Dist_Zilla:
             Task::Kensho::WebDev: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/WebDev
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/WebDev feature'
+      version: '0.016'
     -
       class: Dist::Zilla::Plugin::OptionalFeature
       config:
@@ -409,8 +415,28 @@ x_Dist_Zilla:
             Task::Kensho::XML: '0'
           require_develop: '0'
           type: requires
-      name: =inc::OptionalFeatureForMainTask/XML
-      version: '0.014'
+      name: '=inc::OptionalFeatureForMainTask/XML feature'
+      version: '0.016'
+    -
+      class: Dist::Zilla::Plugin::DynamicPrereqs
+      name: =inc::OptionalFeatureForMainTask/DynamicPrereqs
+      version: '0.006'
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: develop
+          type: requires
+      name: inc::OptionalFeatureForMainTask/::Role::BundleDeps
+      version: '5.020'
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: develop
+          type: requires
+      name: '@Author::ETHER/bundle_plugins'
+      version: '5.020'
     -
       class: Dist::Zilla::Plugin::Git::NextVersion
       config:
@@ -421,7 +447,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/Git::NextVersion'
-      version: '2.023'
+      version: '2.024'
     -
       class: Dist::Zilla::Plugin::ExecDir
       name: '@Author::ETHER/ExecDir'
@@ -446,7 +472,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/Git::GatherDir'
-      version: '2.023'
+      version: '2.024'
     -
       class: Dist::Zilla::Plugin::MetaYAML
       name: '@Author::ETHER/MetaYAML'
@@ -480,11 +506,12 @@ x_Dist_Zilla:
             - '@Author::ETHER/Examples'
           skips: []
       name: '@Author::ETHER/Test::Compile'
-      version: '2.045'
+      version: '2.046'
     -
       class: Dist::Zilla::Plugin::Test::NoTabs
       config:
         Dist::Zilla::Plugin::Test::NoTabs:
+          filename: xt/author/no-tabs.t
           finder:
             - ':InstallModules'
             - ':ExecFiles'
@@ -492,7 +519,7 @@ x_Dist_Zilla:
             - ':TestFiles'
             - '@Author::ETHER/ExtraTestFiles'
       name: '@Author::ETHER/Test::NoTabs'
-      version: '0.08'
+      version: '0.09'
     -
       class: Dist::Zilla::Plugin::EOLTests
       name: '@Author::ETHER/EOLTests'
@@ -529,9 +556,10 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::Test::Kwalitee
       config:
         Dist::Zilla::Plugin::Test::Kwalitee:
+          filename: xt/release/kwalitee.t
           skiptest: []
       name: '@Author::ETHER/Test::Kwalitee'
-      version: '2.08'
+      version: '2.11'
     -
       class: Dist::Zilla::Plugin::MojibakeTests
       name: '@Author::ETHER/MojibakeTests'
@@ -552,6 +580,13 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::PkgVersion
       name: '@Author::ETHER/PkgVersion'
       version: '5.020'
+    -
+      class: Dist::Zilla::Plugin::AuthorityFromModule
+      config:
+        Dist::Zilla::Plugin::AuthorityFromModule:
+          module: Task::Kensho
+      name: '@Author::ETHER/AuthorityFromModule'
+      version: '0.002'
     -
       class: Dist::Zilla::Plugin::Authority
       name: '@Author::ETHER/Authority'
@@ -637,7 +672,7 @@ x_Dist_Zilla:
               name: -Transformer
               version: '4.006'
       name: '@Author::ETHER/PodWeaver'
-      version: '4.005'
+      version: '4.006'
     -
       class: Dist::Zilla::Plugin::NextRelease
       name: '@Author::ETHER/NextRelease'
@@ -645,7 +680,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::ReadmeAnyFromPod
       name: '@Author::ETHER/ReadmeAnyFromPod'
-      version: '0.142250'
+      version: '0.142470'
     -
       class: Dist::Zilla::Plugin::GithubMeta
       name: '@Author::ETHER/GithubMeta'
@@ -674,7 +709,7 @@ x_Dist_Zilla:
           inherit_version: '1'
           meta_noindex: '1'
       name: '@Author::ETHER/MetaProvides::Package'
-      version: '2.000004'
+      version: '2.001002'
     -
       class: Dist::Zilla::Plugin::MetaConfig
       name: '@Author::ETHER/MetaConfig'
@@ -717,20 +752,6 @@ x_Dist_Zilla:
       name: '@Author::ETHER/pluginbundle_version'
       version: '5.020'
     -
-      class: Dist::Zilla::Plugin::MakeMaker::Fallback
-      config:
-        Dist::Zilla::Role::TestRunner:
-          default_jobs: 9
-      name: '@Author::ETHER/MakeMaker::Fallback'
-      version: '0.013'
-    -
-      class: Dist::Zilla::Plugin::ModuleBuildTiny::Fallback
-      config:
-        Dist::Zilla::Role::TestRunner:
-          default_jobs: 9
-      name: '@Author::ETHER/ModuleBuildTiny::Fallback'
-      version: '0.005'
-    -
       class: Dist::Zilla::Plugin::RunExtraTests
       config:
         Dist::Zilla::Role::TestRunner:
@@ -752,7 +773,7 @@ x_Dist_Zilla:
           run:
             - "bash -c \"if [[ `dirname %d` != .build ]]; then test -e .ackrc && grep -q -- '--ignore-dir=%d' .ackrc || echo '--ignore-dir=%d' >> .ackrc; fi; if [[ %d =~ ^%n-[.[:xdigit:]]+$ ]]; then rm -f .latest; ln -s %d .latest; fi\""
       name: '@Author::ETHER/Run::AfterBuild'
-      version: '0.024'
+      version: '0.026'
     -
       class: Dist::Zilla::Plugin::CheckStrictVersion
       name: '@Author::ETHER/CheckStrictVersion'
@@ -769,7 +790,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/initial check'
-      version: '2.023'
+      version: '2.024'
     -
       class: Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts
       config:
@@ -808,7 +829,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/after tests'
-      version: '2.023'
+      version: '2.024'
     -
       class: Dist::Zilla::Plugin::CheckIssues
       name: '@Author::ETHER/CheckIssues'
@@ -828,7 +849,7 @@ x_Dist_Zilla:
           run:
             - 'rm -f README.md'
       name: '@Author::ETHER/remove old READMEs'
-      version: '0.024'
+      version: '0.026'
     -
       class: Dist::Zilla::Plugin::Git::Commit
       config:
@@ -844,27 +865,26 @@ x_Dist_Zilla:
             - README.pod
             - LICENSE
             - META.json
-            - README.md
           allow_dirty_match: []
           changelog: Changes
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/Git::Commit'
-      version: '2.023'
+      version: '2.024'
     -
       class: Dist::Zilla::Plugin::Git::Tag
       config:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: 0
-          tag: v0.37
+          tag: v0.38
           tag_format: v%v%t
           tag_message: v%v%t
           time_zone: local
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/Git::Tag'
-      version: '2.023'
+      version: '2.024'
     -
       class: Dist::Zilla::Plugin::Git::Push
       config:
@@ -875,34 +895,14 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/Git::Push'
-      version: '2.023'
+      version: '2.024'
     -
       class: Dist::Zilla::Plugin::Run::AfterRelease
       config:
         Dist::Zilla::Plugin::Run::Role::Runner:
           run: REDACTED
       name: '@Author::ETHER/install release'
-      version: '0.024'
-    -
-      class: Dist::Zilla::Plugin::Prereqs
-      config:
-        Dist::Zilla::Plugin::Prereqs:
-          phase: develop
-          type: requires
-      name: '@Author::ETHER/bundle_options'
-      version: '5.020'
-    -
-      class: Dist::Zilla::Plugin::PruneCruft
-      name: PruneCruft
-      version: '5.020'
-    -
-      class: Dist::Zilla::Plugin::Prereqs
-      config:
-        Dist::Zilla::Plugin::Prereqs:
-          phase: runtime
-          type: requires
-      name: Prereqs
-      version: '5.020'
+      version: '0.026'
     -
       class: Dist::Zilla::Plugin::PromptIfStale
       config:
@@ -913,15 +913,30 @@ x_Dist_Zilla:
           phase: release
           skip: []
       name: PromptIfStale
-      version: '0.024'
+      version: '0.026'
+    -
+      class: Dist::Zilla::Plugin::OnlyCorePrereqs
+      config:
+        Dist::Zilla::Plugin::OnlyCorePrereqs:
+          check_dual_life_versions: '1'
+          deprecated_ok: '0'
+          phases:
+            - configure
+            - build
+            - runtime
+            - test
+          skips: []
+          starting_version: 'to be determined from perl prereq'
+      name: OnlyCorePrereqs
+      version: '0.017'
     -
       class: Dist::Zilla::Plugin::Test::CleanNamespaces
       config:
         Dist::Zilla::Plugin::Test::CleanNamespaces:
-          filename: xt/release/clean-namespaces.t
+          filename: xt/author/clean-namespaces.t
           skips: []
       name: Test::CleanNamespaces
-      version: '0.005'
+      version: '0.006'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
@@ -964,6 +979,7 @@ x_Dist_Zilla:
       is_trial: '0'
     version: '5.020'
 x_authority: cpan:PERIGRIN
+x_authority_from_module: Task::Kensho
 x_contributors:
   - 'Karen Etheridge <ether@cpan.org>'
   - 'Chris Nehren <apeiron@cpan.org>'
@@ -971,3 +987,4 @@ x_contributors:
   - 'Chris Prather <cprather@hdpublishing.com>'
   - 'Florian Ragwitz <rafl@debian.org>'
   - 'Andrew Whatson <whatson@gmail.com>'
+x_permissions_from_module: Task::Kensho

@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-# this test was generated with Dist::Zilla::Plugin::Test::CleanNamespaces 0.005
+# this test was generated with Dist::Zilla::Plugin::Test::CleanNamespaces 0.006
 
 use Test::More 0.94;
 use Test::CleanNamespaces 0.15;

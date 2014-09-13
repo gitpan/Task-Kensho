@@ -1,11 +1,8 @@
 use strict;
 use warnings;
 package Task::Kensho;
-BEGIN {
-  $Task::Kensho::AUTHORITY = 'cpan:PERIGRIN';
-}
-# git description: v0.36-37-g68c2f8b
-$Task::Kensho::VERSION = '0.37';
+# git description: v0.37-39-g8821c9b
+$Task::Kensho::VERSION = '0.38';
 # ABSTRACT: A Glimpse at an Enlightened Perl
 
 __END__
@@ -20,7 +17,7 @@ Task::Kensho - A Glimpse at an Enlightened Perl
 
 =head1 VERSION
 
-version 0.37
+version 0.38
 
 =head1 SYNOPSIS
 
@@ -449,9 +446,9 @@ Flexible superglue between Web Servers and Perl Web Frameworks or code.
 
 Catalyst is The Elegant MVC Web Application Framework. Task::Catalyst is all you need to start with Catalyst.
 
-=head3 L<Template::Toolkit>
+=head3 L<Template>
 
-Template Processing System
+(Template::Toolkit) Template Processing System
 
 =head3 L<XML::Atom>
 
